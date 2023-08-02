@@ -4,3 +4,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/802f661a41ba10d84c7c/maintainability)](https://codeclimate.com/github/ru3aah/java-project-78/maintainability)
 ### Code Climate test coverage:
 [![Test Coverage](https://api.codeclimate.com/v1/badges/802f661a41ba10d84c7c/test_coverage)](https://codeclimate.com/github/ru3aah/java-project-78/test_coverage)
+### Java CI
+[![Java CI](https://github.com/ru3aah/java-project-78/actions/workflows/myWorkflow.yml/badge.svg)](https://github.com/ru3aah/java-project-78/actions/workflows/myWorkflow.yml)
