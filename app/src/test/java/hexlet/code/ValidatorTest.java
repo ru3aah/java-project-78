@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.schemas.StringSchema;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -46,5 +47,31 @@ public class ValidatorTest {
         assertFalse(schema.isValid(STR_1));
         assertTrue(schema.minLenght(LENGHTH_TRUE).isValid(STR_2));
         assertFalse(schema.minLenght(LENGTH_FALSE).isValid(STR_2));
+    }
+    /**
+     * test for NumberScheme.
+     */
+    @Test
+    public void testNumberSchema() {
+        Validator validator = new hexlet.code.Validator();
+        hexlet.code.schemas.NumberSchema schema = validator.number();
+        final int  minNumber = 2;
+        final int maxNumber = 17;
+
+        assertTrue(schema.isValid(null));
+
+        schema.required();
+        assertFalse(schema.isValid(null));
+        assertFalse(schema.isValid("5"));
+        assertTrue(schema.isValid(10));
+
+        assertTrue(schema.positive().isValid(10));
+        assertFalse(schema.isValid(-10));
+
+        schema.range(minNumber, maxNumber);
+        assertTrue(schema.isValid(2));
+        assertTrue(schema.isValid(16));
+        assertFalse(schema.isValid(19));
+        assertFalse(schema.isValid(-5));
     }
 }
