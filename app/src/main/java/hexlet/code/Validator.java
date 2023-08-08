@@ -9,7 +9,7 @@ public class Validator {
 
     /**
      * String schema contains methods to validate String data.
-     * @return Boolean
+     * @return Boolean.
      */
     public final StringSchema string() {
         return new StringSchema();
