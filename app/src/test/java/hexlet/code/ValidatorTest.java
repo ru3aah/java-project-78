@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.schemas.NumberSchema;
 import hexlet.code.schemas.StringSchema;
 import org.junit.jupiter.api.Test;
 
@@ -53,8 +54,8 @@ public class ValidatorTest {
      */
     @Test
     public void testNumberSchema() {
-        Validator validator = new hexlet.code.Validator();
-        hexlet.code.schemas.NumberSchema schema = validator.number();
+        Validator v = new Validator();
+        NumberSchema schema = v.number();
         final int  minNumber = 2;
         final int maxNumber = 17;
 
