@@ -8,11 +8,26 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ValidatorTest {
 
+    /**
+     * test string.
+     */
     private static final String STR_1 = "what does the fox say";
+    /**
+     * test string.
+     */
     private static final String STR_2 = "whatthe";
+    /**
+     * min length to be suitable for test string.
+     */
     private static final int LENGHTH_TRUE = 2;
+    /**
+     * min length which test string is not suitable for.
+     */
     private static final int LENGTH_FALSE = 9;
 
+    /**
+     * Test for stringSchema.
+     */
     @Test
     public void testStringSchema() {
         Validator v = new Validator();
