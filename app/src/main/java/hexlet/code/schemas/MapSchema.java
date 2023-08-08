@@ -8,7 +8,7 @@ public class MapSchema extends CommonSchema {
      * @return Boolean
      */
     public final MapSchema required() {
-        addRequirement(map -> map instanceof java.util.Map<?, ?>);
+        addRequirement(map -> map instanceof Map<?, ?>);
         setRequiredOn();
         return this;
     }
@@ -32,7 +32,12 @@ public class MapSchema extends CommonSchema {
                 -> chekingMap((Map<String, CommonSchema>) newMap, map));
         return this;
     }
-
+    /**
+     * checks data inside the Map.
+     * @param orig original map
+     * @param shapedMap shaped map
+     * @return Boolean
+     */
     private boolean chekingMap(final Map<String, CommonSchema> orig,
                                final Map<String, CommonSchema> shapedMap) {
         for (Map.Entry<String, CommonSchema> map : shapedMap.entrySet()) {
