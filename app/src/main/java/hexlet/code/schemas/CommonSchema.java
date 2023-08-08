@@ -25,7 +25,7 @@ public class CommonSchema {
 
     /**
      * Checks if obj is not null and suits requirements in the list.
-     * List is generated according to Choosen Scheme.
+     * List is generated according to Chosen Scheme.
      * @param obj Object
      * @return True if all requirements are fulfilled.
      * False in case obj is null or doesn't fit ot at least one requirement.
