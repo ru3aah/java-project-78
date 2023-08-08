@@ -1,1 +1,33 @@
-{"payload":{"allShortcutsEnabled":true,"fileTree":{"":{"items":[{"name":".github","path":".github","contentType":"directory"},{"name":"app","path":"app","contentType":"directory"},{"name":".gitattributes","path":".gitattributes","contentType":"file"},{"name":".gitignore","path":".gitignore","contentType":"file"},{"name":"Makefile","path":"Makefile","contentType":"file"},{"name":"README.md","path":"README.md","contentType":"file"}],"totalCount":6}},"fileTreeProcessingTime":2.5792710000000003,"foldersToFetch":[],"reducedMotionEnabled":"system","repo":{"id":147506449,"defaultBranch":"main","name":"java-package","ownerLogin":"hexlet-boilerplates","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2018-09-05T14:19:47.000+03:00","ownerAvatar":"https://avatars.githubusercontent.com/u/17683462?v=4","public":true,"private":false,"isOrgOwned":true},"refInfo":{"name":"main","listCacheKey":"v0:1688735484.0","canEdit":true,"refType":"branch","currentOid":"b289c5ed1b688a6b623b8712e9af2521feee30ad"},"path":"Makefile","currentUser":{"id":62879675,"login":"ru3aah","userEmail":"ru3aah@gmail.com"},"blob":{"rawLines":[".DEFAULT_GOAL := build-run","","clean:","\tmake -C app clean","","build:","\tmake -C app build","","install:","\tmake -C app install","","run-dist:","\tmake -C run-dist","","run:","\tmake -C app run","","test:","\tmake -C app test","","report:","\tmake -C app report","","lint:","\tmake -C app lint","","update-deps:","\tmake -C app update-deps","","","build-run: build run","",".PHONY: build"],"stylingDirectives":[[{"start":0,"end":13,"cssClass":"pl-smi"}],[],[{"start":0,"end":5,"cssClass":"pl-en"}],[],[],[{"start":0,"end":5,"cssClass":"pl-en"}],[],[],[{"start":0,"end":7,"cssClass":"pl-en"}],[],[],[{"start":0,"end":8,"cssClass":"pl-en"}],[],[],[{"start":0,"end":3,"cssClass":"pl-en"}],[],[],[{"start":0,"end":4,"cssClass":"pl-en"}],[{"start":13,"end":17,"cssClass":"pl-c1"}],[],[{"start":0,"end":6,"cssClass":"pl-en"}],[],[],[{"start":0,"end":4,"cssClass":"pl-en"}],[],[],[{"start":0,"end":11,"cssClass":"pl-en"}],[],[],[],[{"start":0,"end":9,"cssClass":"pl-en"}],[],[{"start":0,"end":6,"cssClass":"pl-c1"}]],"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":false,"configFilePath":null,"networkDependabotPath":"/hexlet-boilerplates/java-package/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":false,"repoAlertsPath":"/hexlet-boilerplates/java-package/security/dependabot","repoSecurityAndAnalysisPath":"/hexlet-boilerplates/java-package/settings/security_analysis","repoOwnerIsOrg":true,"currentUserCanAdminRepo":false},"displayName":"Makefile","displayUrl":"https://github.com/hexlet-boilerplates/java-package/blob/main/Makefile?raw=true","headerInfo":{"blobSize":"320 Bytes","deleteInfo":{"deletePath":"https://github.com/hexlet-boilerplates/java-package/delete/main/Makefile","deleteTooltip":"Fork this repository and delete the file"},"editInfo":{"editTooltip":"Fork this repository and edit the file"},"ghDesktopPath":"x-github-client://openRepo/https://github.com/hexlet-boilerplates/java-package?branch=main&filepath=Makefile","gitLfsPath":null,"onBranch":true,"shortPath":"20cf14d","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2Fhexlet-boilerplates%2Fjava-package%2Fblob%2Fmain%2FMakefile","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":"33","truncatedSloc":"21"},"mode":"file"},"image":false,"isCodeownersFile":null,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":"Makefile","large":false,"loggedIn":true,"newDiscussionPath":"/hexlet-boilerplates/java-package/discussions/new","newIssuePath":"/hexlet-boilerplates/java-package/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/hexlet-boilerplates/java-package/blob/main/Makefile","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/hexlet-boilerplates/java-package/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"renderImageOrRaw":false,"richText":null,"renderedFileInfo":null,"tabSize":8,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"hexlet-boilerplates","repoName":"java-package","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":false,"actionsOnboardingTip":null},"truncated":false,"viewable":true,"workflowRedirectUrl":null,"symbols":{"timedOut":false,"notAnalyzed":true,"symbols":[]}},"copilotAccessInfo":{"accessAllowed":false,"hasSubscriptionEnded":false,"orgHasCFBAccess":false,"userHasCFIAccess":false,"userIsOrgAdmin":false,"userIsOrgMember":false,"business":null},"csrf_tokens":{"/hexlet-boilerplates/java-package/branches":{"post":"u5miiojUXuIs-Un_Wf4gE9-7J4KPuDSaDShwlLYXjPQQec_wxpWyfLtwAQmvSF8I472A899alcqjDn-ugdk7BA"}}},"title":"java-package/Makefile at main · hexlet-boilerplates/java-package","locale":"en"}
+.DEFAULT_GOAL := build-run
+
+clean:
+	make -C app clean
+
+build:
+	make -C app build
+
+install:
+	make -C app install
+
+run-dist:
+	make -C run-dist
+
+run:
+	make -C app run
+
+test:
+	make -C app test
+
+report:
+	make -C app report
+
+lint:
+	make -C app lint
+
+update-deps:
+	make -C app update-deps
+
+
+build-run: build run
+
+.PHONY: build
