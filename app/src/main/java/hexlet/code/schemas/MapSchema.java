@@ -2,7 +2,7 @@ package hexlet.code.schemas;
 
 import java.util.Map;
 
-public class MapSchema extends CommonSchema {
+public class MapSchema extends BaseSchema {
     /**
      * Prohibits null value.
      * @return Boolean
@@ -27,9 +27,9 @@ public class MapSchema extends CommonSchema {
      * @param map Map
      * @return MapSchema
      */
-    public final MapSchema shape(final Map<String, CommonSchema> map) {
+    public final MapSchema shape(final Map<String, BaseSchema> map) {
         addRequirement(newMap
-                -> chekingMap((Map<String, CommonSchema>) newMap, map));
+                -> chekingMap((Map<String, BaseSchema>) newMap, map));
         return this;
     }
     /**
@@ -38,9 +38,9 @@ public class MapSchema extends CommonSchema {
      * @param shapedMap shaped map
      * @return Boolean
      */
-    private boolean chekingMap(final Map<String, CommonSchema> orig,
-                               final Map<String, CommonSchema> shapedMap) {
-        for (Map.Entry<String, CommonSchema> map : shapedMap.entrySet()) {
+    private boolean chekingMap(final Map<String, BaseSchema> orig,
+                               final Map<String, BaseSchema> shapedMap) {
+        for (Map.Entry<String, BaseSchema> map : shapedMap.entrySet()) {
             String key = map.getKey();
             if (!map.getValue().isValid(orig.get(key))) {
                 return false;

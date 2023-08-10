@@ -1,6 +1,6 @@
 package hexlet.code.schemas;
 
-public class StringSchema extends CommonSchema {
+public class StringSchema extends BaseSchema {
 
     /**
      * Empty or null is not allowed.

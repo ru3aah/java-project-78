@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class CommonSchema {
+public class BaseSchema {
 
     /**
      * List of requirements enabled for the choosen schema.

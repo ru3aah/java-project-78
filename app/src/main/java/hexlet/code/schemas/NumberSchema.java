@@ -1,6 +1,6 @@
 package hexlet.code.schemas;
 
-public class NumberSchema extends CommonSchema {
+public class NumberSchema extends BaseSchema {
     /**
      * null is not allowed.
      * @return Boolean
