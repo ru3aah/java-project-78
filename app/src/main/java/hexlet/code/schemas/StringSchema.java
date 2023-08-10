@@ -17,7 +17,7 @@ public class StringSchema extends BaseSchema {
      * @param lenght - minimal allowed length
      * @return Boolean
      */
-    public final StringSchema minLenght(final int lenght) {
+    public final StringSchema minLength(final int lenght) {
         addRequirement(s -> s.toString().length() >= lenght);
         return this;
     }

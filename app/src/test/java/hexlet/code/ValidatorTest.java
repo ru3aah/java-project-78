@@ -51,8 +51,8 @@ public class ValidatorTest {
         assertTrue(schema.contains("wh").isValid(STR_1));
         assertFalse(schema.contains("whatthe").isValid(STR_1));
         assertFalse(schema.isValid(STR_1));
-        assertTrue(schema.minLenght(LENGHTH_TRUE).isValid(STR_2));
-        assertFalse(schema.minLenght(LENGTH_FALSE).isValid(STR_2));
+        assertTrue(schema.minLength(LENGHTH_TRUE).isValid(STR_2));
+        assertFalse(schema.minLength(LENGTH_FALSE).isValid(STR_2));
     }
     /**
      * test for NumberScheme.
