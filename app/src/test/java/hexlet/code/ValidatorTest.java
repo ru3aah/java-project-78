@@ -14,24 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class ValidatorTest {
-
-    /**
-     * test string.
-     */
-    private static final String STR_1 = "what does the fox say";
-    /**
-     * test string.
-     */
-    private static final String STR_2 = "whatthe";
-    /**
-     * min length to be suitable for test string.
-     */
-    private static final int LENGHTH_TRUE = 2;
-    /**
-     * min length which test string is not suitable for.
-     */
-    private static final int LENGTH_FALSE = 9;
-
     /**
      * Test for stringSchema.
      */
@@ -44,15 +26,16 @@ public class ValidatorTest {
         assertTrue(schema.isValid(null));
 
         schema.required();
-        assertTrue(schema.isValid(STR_1));
+        assertTrue(schema.isValid("what does the fox say"));
         assertFalse(schema.isValid(""));
         assertFalse(schema.isValid(null));
 
-        assertTrue(schema.contains("wh").isValid(STR_1));
-        assertFalse(schema.contains("whatthe").isValid(STR_1));
-        assertFalse(schema.isValid(STR_1));
-        assertTrue(schema.minLength(LENGHTH_TRUE).isValid(STR_2));
-        assertFalse(schema.minLength(LENGTH_FALSE).isValid(STR_2));
+        assertTrue(schema.contains("wh").isValid("what does the fox say"));
+        assertFalse(schema.contains("whatthe")
+                .isValid("what does the fox say"));
+        assertFalse(schema.isValid("what does the fox say"));
+        assertTrue(schema.minLength(2).isValid("whatthe"));
+        assertFalse(schema.minLength(9).isValid("whatthe"));
     }
     /**
      * test for NumberScheme.
