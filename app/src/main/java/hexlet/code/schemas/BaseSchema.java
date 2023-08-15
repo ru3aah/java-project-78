@@ -13,7 +13,7 @@ public class BaseSchema {
     /**
      * True in caase requirement to be checked.
      */
-    private Boolean checkRequirement = false;
+    private Boolean required = false;
 
     /**
      * adds the requirement to the List.
@@ -32,7 +32,7 @@ public class BaseSchema {
      */
     public final boolean isValid(final Object obj) {
         if (null == obj) {
-            return !checkRequirement;
+            return !required;
         }
         for (Predicate requirement : requirements) {
             if (!requirement.test(obj)) {
@@ -43,7 +43,7 @@ public class BaseSchema {
     }
 
     protected final void setRequiredOn() {
-        checkRequirement = true;
+        required = true;
 
     }
     protected final void reset() {
