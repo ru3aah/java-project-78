@@ -28,7 +28,7 @@ public class BaseSchema {
      * List is generated according to Chosen Scheme.
      * @param obj Object
      * @return True if all requirements are fulfilled.
-     * False in case obj is null or doesn't fit ot at least one requirement.
+     * False in case obj is null or doesn't fit at least one requirement.
      */
     public final boolean isValid(final Object obj) {
         if (null == obj) {

@@ -1,13 +1,13 @@
 package hexlet.code.schemas;
 
 public class StringSchema extends BaseSchema {
-
     /**
      * Empty or null is not allowed.
      * @return Boolean
      */
     public  final StringSchema required() {
-        addRequirement(s -> s instanceof String && !"".equals(s));
+        addRequirement(s -> s instanceof String
+                && s != null && !((String) s).isEmpty());
         setRequiredOn();
         return this;
     }
