@@ -16,8 +16,7 @@ public class NumberSchema extends BaseSchema {
      * @return Boolean
      */
     public final NumberSchema positive() {
-        addRequirement(num -> num instanceof Integer && Integer
-                .parseInt(num.toString()) > 0);
+        addRequirement(num -> num instanceof Integer && (int) num > 0);
         return this;
     }
 
@@ -28,9 +27,8 @@ public class NumberSchema extends BaseSchema {
      * @return Boolean
      */
     public final NumberSchema range(final int min, final int max) {
-        addRequirement(num -> num instanceof Integer && min <= Integer
-                .parseInt(num.toString())
-                && Integer.parseInt(num.toString()) <= max);
+        addRequirement(num -> num instanceof Integer && min <= (int) num
+                && (int) num <= max);
         return this;
     }
 }
