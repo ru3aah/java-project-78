@@ -14,11 +14,11 @@ public class StringSchema extends BaseSchema {
 
     /**
      * Checks if String is >= specified minimal length.
-     * @param lenght - minimal allowed length
+     * @param length - minimal allowed length
      * @return Boolean
      */
-    public final StringSchema minLength(final int lenght) {
-        addRequirement(s -> s.toString().length() >= lenght);
+    public final StringSchema minLength(final int length) {
+        addRequirement(s -> s.toString().length() >= length);
         return this;
     }
 
