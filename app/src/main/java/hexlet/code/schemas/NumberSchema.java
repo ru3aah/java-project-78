@@ -2,11 +2,16 @@ package hexlet.code.schemas;
 
 public class NumberSchema extends BaseSchema {
     /**
+     * set requirement for obj to be instance of Integer.
+     */
+    public NumberSchema() {
+        addRequirement(Integer.class::isInstance);
+    }
+    /**
      * null is not allowed.
      * @return Boolean
      */
     public final NumberSchema required() {
-        addRequirement(num -> num instanceof Integer);
         setRequiredOn();
         return this;
     }

@@ -5,7 +5,7 @@ import hexlet.code.schemas.NumberSchema;
 import hexlet.code.schemas.StringSchema;
 
 /**
- * Validator class check if data suits choosen validation scheme.
+ * Validator class check if data suits chosen validation scheme.
  */
 public class Validator {
 

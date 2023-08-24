@@ -4,11 +4,16 @@ import java.util.Map;
 
 public class MapSchema extends BaseSchema {
     /**
+     * set requirement for obj to be instance of Map.
+     */
+    public MapSchema() {
+        addRequirement(map -> map instanceof Map<?, ?>);
+    }
+    /**
      * Prohibits null value.
      * @return Boolean
      */
     public final MapSchema required() {
-        addRequirement(map -> map instanceof Map<?, ?>);
         setRequiredOn();
         return this;
     }

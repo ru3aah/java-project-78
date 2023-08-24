@@ -7,11 +7,11 @@ import java.util.function.Predicate;
 public class BaseSchema {
 
     /**
-     * List of requirements enabled for the choosen schema.
+     * List of requirements enabled for the chosen schema.
      */
     private List<Predicate> requirements = new ArrayList<>();
     /**
-     * True in caase requirement to be checked.
+     * True in case requirement to be checked.
      */
     private Boolean required = false;
 
