@@ -23,8 +23,7 @@ public class MapSchema extends BaseSchema {
      * @return Boolean
      */
     public final MapSchema sizeof(final int givenSize) {
-        addRequirement(map -> map instanceof Map
-                && ((Map<?, ?>) map).size() == givenSize);
+        addRequirement(map -> ((Map<?, ?>) map).size() == givenSize);
         return this;
     }
     /**

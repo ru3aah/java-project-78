@@ -21,7 +21,7 @@ public class NumberSchema extends BaseSchema {
      * @return Boolean
      */
     public final NumberSchema positive() {
-        addRequirement(num -> num instanceof Integer && (int) num > 0);
+        addRequirement(num -> (int) num > 0);
         return this;
     }
 
@@ -32,7 +32,7 @@ public class NumberSchema extends BaseSchema {
      * @return Boolean
      */
     public final NumberSchema range(final int min, final int max) {
-        addRequirement(num -> num instanceof Integer && min <= (int) num
+        addRequirement(num -> min <= (int) num
                 && (int) num <= max);
         return this;
     }
